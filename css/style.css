@@ -1,0 +1,148 @@
+.h1, h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 87px;
+    background-image: url(https://images.unsplash.com/photo-1498842812179-c81beecf902c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    float: left;
+    width: 50%;
+    margin-left: -1px;
+}
+#log-in {
+    width: 360px;
+    margin-right: 2px;
+    background-color: blueviolet;
+}
+#sign-up {
+    width: 367px;
+    margin-right: 2px;
+    background-color: blueviolet;
+
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin-bottom: 10px;
+    border-color: black;
+    /* transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+}
+.custom-control {
+    position: relative;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+    text-align: center;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: blue;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); */
+}
+.navbar-light .navbar-brand {
+    color: rgba(0,0,0,.9);
+    font-size: 38px;
+    font-family: 'Alfa Slab One', cursive;
+    color: plum;
+    text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
+}
+.navbar-light .navbar-brand:hover {
+    color: rgba(0,0,0,.9);
+    font-size: 38px;
+    font-family: 'Alfa Slab One', cursive;
+    color: plum;
+    text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
+}
+.bg-light {
+    background-color: #f8f9fa!important;
+    margin-bottom: 54px;
+}
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+    text-align: center;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    /* background-color: rgb(244, 96, 232); */
+}
+/* @media (min-width: 992px) */
+.navbar-expand-lg {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    background-color: black;
+    color: white;
+}
+.nav-link {
+    color: white;
+}
+.navbar-light {
+    color: white;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.navbar-expand-lg {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    background-color: black;
+    color: white;
+    margin-bottom: 40px;
+}
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+    text-align: center;
+    font-family: 'Oleo Script', cursive;
+    font-size: 47px;
+}
+.container {
+    /* width: 400px; */
+
+}
+
+/* html,
+body {
+  height: 100%;
+} */
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+/* Other Classes for Page Styling */
+
+/* body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+} */

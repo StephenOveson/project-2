@@ -306,3 +306,20 @@ input[type=text], input[type=password] {
 .container-one{
     text-align: center;
 }
+.button-container{
+    margin: auto;
+}
+.sign-in-button {
+    display: block;
+    /* max-width: 300px; */
+    margin: auto;
+
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    float: left;
+    margin-top: 71px;
+    width: 50%;
+    margin-left: -1px;
+    width: 100%;
+}

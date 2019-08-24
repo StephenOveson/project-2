@@ -23,7 +23,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="home_page.html">Glam-on-Demand</a>
-                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
               
@@ -37,7 +37,7 @@
                     </li>
                     <li class="nav-item">
                             <a class="nav-link" href="#">Contact Us</a>
-                          </li> -->
+                          </li>
                     <!-- <li class="nav-item dropdown"> -->
                       <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Contact Us
@@ -66,46 +66,52 @@
 
             
         <div class="container">
-                  <div class="row">
-                  <div class="col-md-9 col-lg-8 mx-auto">
-                    <h3 class="login-heading mb-4">Welcome back!</h3>
+                <h2>Modal Login Form
 
-
-                    <p class="paragraph-description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae optio consequatur cum tenetur quidem inventore, ut vel deserunt expedita excepturi laboriosam neque delectus ullam veniam quae sunt nesciunt doloremque! Ex.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolor id, nostrum rerum corrupti vitae, magni modi ex quia corporis iste suscipit aliquam vero. Minus sapiente tenetur vero nobis natus.
-                      </p>
-                  <!--
-                    <form>
-                      <div class="form-label-group">
-                            <label for="inputEmail">Email Address:</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                        <label for="inputEmail">Email address</label>
-                      </div>
-      
-                      <div class="form-label-group">
-                            <label for="inputPassword">Password:</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                        <label for="inputPassword">Password</label>
-                      </div>
-                    -->
-                      <!-- <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
-                      </div>  -->
-                      <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" id="log-in">Sign in</button>
-                      <div class="text-center">
-                      <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" href="" type="submit" id="sign-up">Sign up</button>
-                      <div class="text-center">
-                        <!-- <a class="small" href="#">Forgot password?</a></div> -->
-                    </form>
-                  </div>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+            </h2>
+                <div id="id01" class="modal">
+                  
+                  <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+                    </div>
+                
+                    <div class="container">
+                      <label for="uname"><b>Username</b></label>
+                      <input type="text" placeholder="Enter Username" name="uname" required>
+                
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                      <button type="submit">Login</button>
+                      <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label>
+                    </div>
+                
+                    <div class="container" style="background-color:#f1f1f1">
+                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                      <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                  </form>
                 </div>
-              </div>
-            </div>
-          </div>
+                
+                <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                </script>
+                
+
         </div>
-      </div>
       
 
       <div class="footer">

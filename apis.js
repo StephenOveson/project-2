@@ -1,18 +1,23 @@
+// Gets location from form
+let locationForm = document.getElementById('location-form');
+
+// listens for submit
+locationForm.addEventListener('submit', geocode);
 // Google Maps API
 function geoCode() {
-    let location = "Salt Lake City";
+    let location = document.getElementById('location-input');
     axios.get("https://maps.googleapis.come/maps/api/geocode/json", {
         params: {
             address: location,
             key: "AIzaSyA-MSaLJHOpjrqvNUrp8GJNiO-n1_hbAtA"
         }
-    }) .then(function(response){
+    }).then(function(response){
         console.log(response);
-
+        
         // Formatted Address
         let formattedAddress = response.data.results[0].formatted_Adress;
         let formattedAddressOutput = `
-            <ul class="list-group">
+        <ul class="list-group">
             <li class="list-group-item">${formattedAddress}</li>
             </ul>
         `;
@@ -43,6 +48,7 @@ function geoCode() {
         document.getElementById("formatted-address").innerHTML = formattedAddressOutput;
         document.getElementById("address-components").innerHTML = addressComponentsOutput;
         document.getElementById("geometry").innerHTML = geometryOutput;
+
 
     }).catch(function(error){
         console.log(error);

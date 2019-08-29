@@ -12,6 +12,7 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use("/public", express.static(path.join(__dirname, "public")));
+app.use("/css", express.static(path.join(__dirname, "css")));
 
 // Handlebars
 // app.engine(

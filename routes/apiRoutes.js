@@ -26,10 +26,12 @@ module.exports = function(app) {
   });
 
   app.delete("/api/customers/:id", function(req, res) {
-    db.Customers.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.json(dbExample);
+    db.Customers.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(data) {
+      res.json(data);
     });
   });
 };

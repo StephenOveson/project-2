@@ -25,6 +25,21 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/api/customer/:email", function(req, res) {
+    db.Customers.update(
+      {
+        Email: req.body.email
+      },
+      {
+        where: {
+          Email: req.params.email
+        }
+      }
+    ).then(function(data) {
+      res.json(data);
+    });
+  });
+
   app.delete("/api/customers/:id", function(req, res) {
     db.Customers.destroy({
       where: {

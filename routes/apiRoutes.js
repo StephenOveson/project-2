@@ -40,7 +40,7 @@ module.exports = function(app) {
     });
   });
 
-  app.delete("/api/customers/:id", function(req, res) {
+  app.delete("/api/customer/:id", function(req, res) {
     db.Customers.destroy({
       where: {
         id: req.params.id

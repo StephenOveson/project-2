@@ -1,26 +1,52 @@
 var db = require("../models");
+// var Op = Sequelize.Op
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/customers", function(req, res) {
-    db.Customers.findAll({}).then(function(dbcustomers) {
-      res.json(dbcustomers);
+  app.get("/api/services", function(req, res) {
+    db.Services.findAll({}).then(function(data) {
+      res.json(data);
     });
   });
 
-  // Create a new example
-  app.post("/api/customers", function(req, res) {
-    db.Customers.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.get("/api/login/", function(req, res) {
+    db.Customers.findOne({
+      where: req.body.email || req.body.name
+    }).then(function(data) {
+      if (req.body.password === data.password) {
+        res.json(data);
+      }
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/customers/:id", function(req, res) {
-    db.Customers.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.json(dbExample);
+  app.post("/api/customer", function(req, res) {
+    var data = req.body;
+    db.Customers.create(data).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  app.post("/api/customer/:email", function(req, res) {
+    db.Customers.update(
+      {
+        Email: req.body.email
+      },
+      {
+        where: {
+          Email: req.params.email
+        }
+      }
+    ).then(function(data) {
+      res.json(data);
+    });
+  });
+
+  app.delete("/api/customer/:id", function(req, res) {
+    db.Customers.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(data) {
+      res.json(data);
     });
   });
 };

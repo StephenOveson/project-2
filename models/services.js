@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Services = sequelize.define("services", {
+  var Services = sequelize.define("Services", {
     name: DataTypes.STRING,
     cost: DataTypes.DECIMAL(10, 2)
   });

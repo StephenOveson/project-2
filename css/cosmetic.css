@@ -59,7 +59,7 @@ body {
     background-color: #fff;
 }
 
-.container {
+.container, .container-recent, .container-services, .container-location {
   padding: 16px;
     margin-right: auto;
     margin-left: auto;

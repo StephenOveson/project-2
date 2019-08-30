@@ -1,156 +1,121 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <!-- <link href="./css/style.css" type="text/css" rel="stylesheet"> -->
+  <link href="./css/cosmetic.css" type="text/css" rel="stylesheet">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One|Shrikhand&display=swap" rel="stylesheet">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
+  <!------ Include the above in your HEAD tag ---------->
 
-
-        <nav class="navbar navbar-expand-lg navbar-light" id="navbar-2">
-                <img src="./img/icons8-crown-and-lipstick-48.png" alt="">
-                <a class="navbar-brand" href="home_page.html">Glam-on-Demand</a>
-               
-              </nav>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
 
 
+  <title>Glam-on-Demand</title>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbar-2">
+    <img src="./img/icons8-crown-and-lipstick-48.png" alt="">
+    <a class="navbar-brand" href="home_page.html">Glam-on-Demand</a>
+
+  </nav>
 
 
 
+  <div class="container-two">
+    <div class="row">
+      <div class="col-md-9 col-lg-8 mx-auto">
+        <h3 class="login-heading mb-4">Sign In</h3>
+        <div class="container">
 
-    <aside class="col-sm-4" id="body-type">
-   
+          <div class="card">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+              <h4 class="card-title mt-3 text-center">User Account</h4>
+              
+              <hr>
+            
+              <form>
+                <div class="form-group input-group" id="top-label">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                  </div>
+                  <input name="" class="form-control" placeholder="User Name" type="text">
+                </div> <!-- form-group// -->
 
-
-    <div class="card">
-      <article class="card-body">
-        <a href="./sign-up.html" class="btn btn-outline-primary" id="sign-up-button2">Sign up</a>
-        <h4 class="card-title mb-4 mt-1">Sign in</h4>
-        <p>
-            <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
-            <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via Facebook</a>
-          </p>
-        <hr>
-        <form>
-            <!-- <div class="input-group-prepend">
-                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-             </div> -->
-          <div class="form-group">
-              <label>Your email</label>
-              <input name="" class="form-control" placeholder="Email or login" type="email">
-          </div> <!-- form-group// -->
-          <div class="form-group">
-            	<label>Your password</label>
-              <input class="form-control" placeholder="******" type="password">
-          </div> <!-- form-group// -->                                      
-          <div class="row">
-              <div class="col-md-6">
-                  <div class="form-group">
-                      <button type="submit" class="btn btn-primary btn-block"> Login  </button>
-                  </div> <!-- form-group// -->
-              </div>
-              <br>
-              <!-- <div class="col-md-6">
-                  <a class="small" href="#">Forgot password?</a>
-              </div>                                             -->
-          </div> <!-- .row// -->                                                                  
-      </form>
-      </article>
-      </div> <!-- card.// -->
-      
-        </aside> <!-- col.// -->
-        <aside class="col-sm-4">
-
-          
-    
-
-        <!-- <div class="container">
-
-                <h2>Login Here</h2>
-
-                <button onclick="document.getElementById('id01').style.display='block'">Enter</button>
-                
-                <div id="id01" class="modal">
-                  
-                  <form class="modal-content animate" action="/action_page.php">
-                    <div class="imgcontainer">
-                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                      <img src="./img/img_avatar2.png" alt="Avatar" class="avatar">
-                    </div>
-                
-                    <div class="container">
-                      <label for="uname"><b>Username</b></label>
-                      <input type="text" placeholder="Enter Username" name="uname" required>
-                
-                      <label for="psw"><b>Password</b></label>
-                      <input type="password" placeholder="Enter Password" name="psw" required>
-                        
-                      <button type="submit">Login</button>
-                      <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                      </label>
-                    </div>
-                
-                   
-                    
-                  </form>
+                <div class="login-or">
+                  <hr class="hr-or">
+                  <span class="span-or">or</span>
                 </div>
-                
-                <script>
-                // Get the modal
-                var modal = document.getElementById('id01');
-                
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-                </script>
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                  </div>
+                  <input name="" class="form-control" placeholder="Email address" type="email">
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                  </div>
+                  <input class="form-control" placeholder="Password" type="password">
+                </div> <!-- form-group// -->
+
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-block">Enter</button>
+                </div> <!-- form-group// -->
 
 
 
 
-
-
+                <p class="text-center">Forgot Password? <a href="./sign-in.html">Click Here</a> </p>
+              </form>
+            </article>
+          </div> <!-- card.// -->
         </div>
-               
-       -->
 
 
+        <br>
+        <br>
+        <br>
 
-       <br>
-       <br>
-       <br>
-      <div class="footer">
-          <a href="./contact.html" class="paragraph-footer-one" target="_blank">Contact Us  |</a>
-          <!-- <p class="paragraph-footer-one">Contact Us</p> -->
-          <a href="./apply.html" class="paragraph-footer-two" target="_blank">|  Apply Now</a>
-          <!-- <p class="paragraph-footer-two">Apply Now</p> -->
-          <!-- <p>Footer</p> -->
+
+        <div class="footer">
+          <a href="./contact.html" class="paragraph-footer-one" target="_blank">Contact Us |</a>
+          <a href="./apply.html" class="paragraph-footer-two" target="_blank">| Apply Now</a>
         </div>
-  
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+</body>
+
 </html>

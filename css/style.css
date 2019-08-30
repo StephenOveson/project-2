@@ -99,8 +99,10 @@
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    background-color: white;
     padding: 15px;
+    border-radius: 8px;
     box-shadow: 0px 0px 2px black;
     /* background-color: rgb(244, 96, 232); */
 }
@@ -566,7 +568,8 @@ background-size: 30px 30px;;
   flex: 1 1 auto;
   padding: 1.25rem;
   box-shadow: 0px 0px 2px black; 
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
+  background-color: white;
   margin-bottom: 35px;
   border-radius: 8px;
 }

@@ -18,6 +18,11 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/whoami", function(req, res) {
+    console.log(req.user);
+    res.json(req.user);
+  });
+
   app.post("/api/customer", function(req, res) {
     var data = req.body;
     db.Customers.create(data).then(function(results) {
@@ -54,13 +59,3 @@ module.exports = function(app) {
     });
   });
 };
-
-// function passwordCheck(id, password) {
-//   db.Customers.findOne({
-//     where: id
-//   }).then(function(data) {
-//     if (password === data.password) {
-
-//     }
-//   });
-// }

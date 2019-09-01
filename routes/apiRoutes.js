@@ -10,12 +10,17 @@ module.exports = function(app) {
 
   app.get("/api/login/", function(req, res) {
     db.Customers.findOne({
-      where: req.body.email || req.body.name
+      where: req.body.email
     }).then(function(data) {
       if (req.body.password === data.password) {
         res.json(data);
       }
     });
+  });
+
+  app.get("/whoami", function(req, res) {
+    console.log(req.user);
+    res.json(req.user);
   });
 
   app.post("/api/customer", function(req, res) {
@@ -26,18 +31,22 @@ module.exports = function(app) {
   });
 
   app.post("/api/customer/:email", function(req, res) {
-    db.Customers.update(
-      {
-        Email: req.body.email
-      },
-      {
-        where: {
-          Email: req.params.email
+    var password = req.body.password;
+    var id = $("button").data(id);
+    if (passwordCheck(id, password)) {
+      db.Customers.update(
+        {
+          Email: req.body.email
+        },
+        {
+          where: {
+            Email: req.params.email
+          }
         }
-      }
-    ).then(function(data) {
-      res.json(data);
-    });
+      ).then(function(data) {
+        res.json(data);
+      });
+    }
   });
 
   app.delete("/api/customer/:id", function(req, res) {

@@ -19,16 +19,16 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/me", function(req, res) {
+  app.get("/api/customer", function(req, res) {
     console.log(req.user);
     res.json(req.user);
   });
 
-  app.post("/sign-up", function(req, res) {
+  app.post("/api/customer/new", function(req, res) {
     var data = req.body;
     db.Customers.create({
       Name: data.Name,
-      Email: data.Email,
+      Email: data.Email.toLowerCase(),
       Phone: data.Phone,
       Address: data.Address,
       City: data.City,

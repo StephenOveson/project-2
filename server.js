@@ -27,15 +27,12 @@ passport.use(
       passwordField: "password"
     },
     function(email, password, done) {
-      console.log("About to check database!");
-      db.Customers.findAll({ where: { Email: email } })
+      db.Customers.findAll({ where: { Email: email.toLowerCase() } })
         .then(function(user) {
           if (!user) {
             console.log("wrong email");
             return done(null, false, { message: "Incorrect email." });
           }
-          console.log(user);
-          console.log("This is the password " + password);
           bcrypt
             .compare(password, user[0].dataValues.Password)
             .then(function(isMatch) {

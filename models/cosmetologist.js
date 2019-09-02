@@ -3,7 +3,10 @@ module.exports = function(sequelize, DataTypes) {
     Name: DataTypes.STRING,
     Email: DataTypes.STRING,
     Phone: DataTypes.INTEGER,
-    Address: DataTypes.TEXT,
+    Address: DataTypes.STRING,
+    City: DataTypes.STRING,
+    State: DataTypes.STRING,
+    Zip: DataTypes.STRING,
     Password: DataTypes.STRING
   });
   Cosmetologists.associate = function(models) {

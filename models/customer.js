@@ -4,6 +4,9 @@ module.exports = function(sequelize, DataTypes) {
     Email: DataTypes.STRING,
     Phone: DataTypes.STRING,
     Address: DataTypes.STRING,
+    City: DataTypes.STRING,
+    State: DataTypes.STRING,
+    Zip: DataTypes.STRING,
     Password: DataTypes.STRING
   });
   return Customers;

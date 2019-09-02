@@ -1,4 +1,5 @@
 var db = require("../models");
+var bcrypt = require("bcrypt");
 // var Op = Sequelize.Op
 
 module.exports = function(app) {
@@ -18,21 +19,29 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/whoami", function(req, res) {
+  app.get("/api/me", function(req, res) {
     console.log(req.user);
     res.json(req.user);
   });
 
-  app.post("/api/customer", function(req, res) {
+  app.post("/sign-up", function(req, res) {
     var data = req.body;
-    db.Customers.create(data).then(function(results) {
-      res.json(results);
+    db.Customers.create({
+      Name: data.Name,
+      Email: data.Email,
+      Phone: data.Phone,
+      Address: data.Address,
+      City: data.City,
+      State: data.State,
+      Zip: data.Zip,
+      Password: bcrypt.hashSync(data.Password, bcrypt.genSaltSync(2))
+    }).then(function() {
+      res.redirect("/");
     });
   });
 
   app.post("/api/customer/:email", function(req, res) {
     var password = req.body.password;
-    var id = $("button").data(id);
     if (passwordCheck(id, password)) {
       db.Customers.update(
         {

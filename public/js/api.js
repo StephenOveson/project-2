@@ -34,6 +34,7 @@ var displayServices = function() {
         .addClass("service-button")
         .on("click", function() {
           $("#service-title").text("Cosmetologists");
+          $("#pickYour").text("Cosmetologist!");
           var id = $(this).data("id");
           API.getCosmetologists(id).then(function(data) {
             var cosmetologists = data.map(function(cosmetologist) {
@@ -52,6 +53,7 @@ var displayServices = function() {
                 .text(cosmetologist.Name)
                 .attr("data-id", cosmetologist.id)
                 .on("click", function() {
+                  $("#pickYour").text("Day!");
                   id = $(this).data("id");
                   API.getAvailability(id).then(function(data) {
                     var availabilities = data.map(function(availability) {
@@ -83,11 +85,16 @@ displayServices();
 
 var displayName = function() {
   API.getCustomer().then(function(data) {
+    var result = data[0];
     var a = $("<a>")
-      .text(data[0].Name)
-      .attr("href", "/profile.html")
-      .attr("style", "color: white;");
+      .text(result.Name)
+      .attr("href", "/profile.html");
+    var p = $("<p>").text(result.Name);
     $("#customerName").append(a);
+    $("#profileUser").append(p);
+    $("#userName").append(result.Name);
+    $("#accountId").append(" " + result.id);
+    $("#userEmail").append(result.Email);
   });
 };
 

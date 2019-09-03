@@ -16,6 +16,12 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
+    models.Services.hasOne(models.Appointments, {
+      onDelete: "CASCADE",
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
   return Appointments;
 };

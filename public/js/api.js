@@ -19,10 +19,10 @@ var displayServices = function() {
       var button = $("<button>")
         .text(service.name + " " + "$" + service.cost)
         .attr("data-id", service.id)
-        .attr("id", "selectService")
-        .addClass("serviceCss")
+        .addClass("service-button")
         .on("click", function() {
           console.log($(this).data("id"));
+          
         });
       return button;
     });

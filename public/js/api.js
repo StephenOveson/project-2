@@ -28,9 +28,9 @@ var displayServices = function() {
         .addClass("service-button")
         .on("click", function() {
           id = $(this).data("id");
-          getCosmetologists(id).then(function(data){
-            
-          })
+          getCosmetologists(id).then(function(data) {
+            var cosmetologists = data.map(function(cosmetologist) {});
+          });
         });
       return button;
     });

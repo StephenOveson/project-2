@@ -31,6 +31,14 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/availabilities/:id", function(req, res) {
+    db.Availability.findAll({
+      where: { CosmetologistId: req.params.id }
+    }).then(function(data) {
+      res.json(data);
+    });
+  });
+
   app.post("/api/customer/new", function(req, res) {
     var data = req.body;
     db.Customers.create({
@@ -45,24 +53,6 @@ module.exports = function(app) {
     }).then(function() {
       res.redirect("/");
     });
-  });
-
-  app.post("/api/customer/:email", function(req, res) {
-    var password = req.body.password;
-    if (passwordCheck(id, password)) {
-      db.Customers.update(
-        {
-          Email: req.body.email
-        },
-        {
-          where: {
-            Email: req.params.email
-          }
-        }
-      ).then(function(data) {
-        res.json(data);
-      });
-    }
   });
 
   app.delete("/api/customer/:id", function(req, res) {

@@ -10,6 +10,18 @@ var API = {
       url: "api/cosmetologist/service/" + id,
       type: "GET"
     });
+  },
+  getCustomer: function() {
+    return $.ajax({
+      url: "api/customer",
+      type: "GET"
+    });
+  },
+  getAvailability: function(id) {
+    return $.ajax({
+      url: "api/availabilities/" + id,
+      type: "GET"
+    });
   }
 };
 
@@ -36,7 +48,23 @@ var displayServices = function() {
                     "$" +
                     cosmetologist.Services[0].cost
                 );
-              var select = $("<button>").text(cosmetologist.Name);
+              var select = $("<button>")
+                .text(cosmetologist.Name)
+                .attr("data-id", cosmetologist.id)
+                .on("click", function() {
+                  id = $(this).data("id");
+                  API.getAvailability(id).then(function(data) {
+                    var availabilities = data.map(function(availability) {
+                      console.log(availability.dayOfWeek);
+                      var newButton = $("<button>").text(
+                        availability.dayOfWeek
+                      );
+                      return newButton;
+                    });
+                    $("#services").empty();
+                    $("#services").append(availabilities);
+                  });
+                });
               div.append(select);
               div.append(p);
               return div;
@@ -52,3 +80,15 @@ var displayServices = function() {
 };
 
 displayServices();
+
+var displayName = function() {
+  API.getCustomer().then(function(data) {
+    var a = $("<a>")
+      .text(data[0].Name)
+      .attr("href", "/profile.html")
+      .attr("style", "color: white;");
+    $("#customerName").append(a);
+  });
+};
+
+displayName();

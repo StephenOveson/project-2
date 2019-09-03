@@ -32,6 +32,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../dashboard.html"));
   });
 
+  app.get("/profile" + html, function(req, res) {
+    res.sendFile(path.join(__dirname, "../profile.html"));
+  });
+
   app.get("/contact" + html, function(req, res) {
     res.sendFile(path.join(__dirname, "../contact.html"));
   });

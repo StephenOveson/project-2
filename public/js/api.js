@@ -4,6 +4,12 @@ var API = {
       url: "api/services",
       type: "GET"
     });
+  },
+  getCosmetologists: function(id) {
+    return $.ajax({
+      url: "api/cosmetologist/service/" + id,
+      type: "GET"
+    });
   }
 };
 
@@ -21,8 +27,10 @@ var displayServices = function() {
         .attr("data-id", service.id)
         .addClass("service-button")
         .on("click", function() {
-          console.log($(this).data("id"));
-          
+          id = $(this).data("id");
+          getCosmetologists(id).then(function(data){
+            
+          })
         });
       return button;
     });

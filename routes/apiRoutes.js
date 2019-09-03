@@ -26,6 +26,8 @@ module.exports = function(app) {
 
   app.get("api/cosmetologist/service/:id", function(req, res) {
     db.Cosmetologist.findAll({
+      include: [{ model: Services,
+      where: }]
       where: req.params.id
     }).then(function(data) {
       res.json(data);

@@ -20,6 +20,7 @@ var displayServices = function() {
         .text(service.name + " " + "$" + service.cost)
         .attr("data-id", service.id)
         .attr("id", "selectService")
+        .addClass("serviceCss")
         .on("click", function() {
           console.log($(this).data("id"));
         });

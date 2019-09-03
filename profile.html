@@ -11,15 +11,21 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link href="./css/cosmetic.css" type="text/css" rel="stylesheet">
+
   <!-- <link rel="stylesheet" href="css/profile.css"> -->
 
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One|Shrikhand&display=swap" rel="stylesheet">
 
-  <!-- Jquerey -->
+  <!------ Include the above in your HEAD tag ---------->
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
 
 
   <title>Profile Page</title>
@@ -37,75 +43,148 @@
   </div>
 
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9 col-lg-8 mx-auto">
-        <!------ Include the above in your HEAD tag ---------->
+  <div class="container-profile">
+    <div class="row profile">
+      <div class="side-bar-profile">
+        <div class="profile-sidebar">
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+          <div class="profile-usertitle">
+            <img src="./img/icons8-female-profile-64 (1).png" id="img-profile" alt="img avatar">
+            <div class="profile-usertitle-name">
+              User Name
+            </div>
+            <div class="profile-usertitle-job">
+              Account Number?
+            </div>
+            <hr>
+          </div>
+
+          <div class="profile-userbuttons">
 
 
-        <div class="container">
+          </div>
 
 
-          <div class="card">
-            <article class="card-body mx-auto" style="max-width: 400px;">
-              <a href="https://placeholder.com">
-                <img src="https://via.placeholder.com/250x150" class="img-fluid" alt="Responsive image">
-              </a>
-              <h4 class="card-title mt-3 text-center">Name PlaceHolder</h4> 
-              <h4 class="card-title mt-3 text-center">Recent Searches</h4>
-                <!-- Recent Services Div Box Goes Here -->
+          <div class="profile-usermenu">
+            <ul class="nav">
+              <li>
+                <a href="#" id="overview-click">
+                  <i class="glyphicon glyphicon-home"></i>
+                  Overview </a>
+              </li>
 
-              <div class="dropdown">
+              <li>
+                <a href="#" id="settings-click">
+                  <i class="glyphicon glyphicon-user"></i>
+                  Account Settings </a>
+              </li>
 
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Edit Profile
-                  <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <div class="form-group">
-                    <input name="" class="form-control" placeholder="Username" type="email">
-                  </div> <!-- form-group// -->
-                  <div class="form-group">
-                    <input name="" class="form-control" placeholder="Email Address" type="email">
-                  </div> <!-- form-group// -->
-                  <div class="form-group">
-                    <input name="" class="form-control" placeholder="Phone Number" type="email">
-                  </div> <!-- form-group// -->
-                  <div class="form-group">
-
-                    <div class="button-panel text-right">
-                      <button type="submit" class="btn btn-primary">Done</button>
-                      <button type="button" class="btn btn-white">Cancel</button>
-                    </div>
-                </ul>
-              </div>
-
-            </article>
-          </div> <!-- card.// -->
-
+              <li>
+                <a href="#" id="help-click">
+                  <i class="glyphicon glyphicon-flag"></i>
+                  Help </a>
+              </li>
+            </ul>
+          </div>
+          <!-- END MENU -->
         </div>
+      </div>
 
-        <div class="footer">
-          <a href="./contact.html" class="paragraph-footer-one" target="_blank">Contact Us |</a>
-          <p class="paragraph-footer-one">Contact Us</p>
-          <a href="./apply.html" class="paragraph-footer-two" target="_blank">| Apply Now</a>
-          <p class="paragraph-footer-two">Apply Now</p>
-          <!-- <p>Footer</p> -->
-        </div>
+     
+          <div class="col-md-9">
+              <div class="profile-content" id="profile-content" style="visibility: hidden">
+                <p id="p-js">Profile Settings</p>
+                <p>Name:</p>
+                <hr>
+                <p>Account Number:</p>
+                <hr>
+                <p>Passowrd:</p>
+                  
+                  
+                </form>
+             
+            </div>
+          </div>
+
+        
 
 
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-          crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-          crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-          crossorigin="anonymous"></script>
+ 
+
+
+  <!-- <div class="js-container">
+  <div class="col-md-9">
+      <div class="profile-content" id="profile-content" style="visibility: hidden">
+        Some user related content goes here...
+        <button>click me </button>
+        <form>Name:
+          <input type="text" value="" id="name" name="name">
+          </input>
+        </form>
+      </div>
+    </div>
+  </div> -->
+
+
+  
+
+
+
+      <div class="footer">
+        <a href="./sign-up.html" class="paragraph-footer-one" target="_blank">Contact Us |</a>
+        <a href="./apply.html" class="paragraph-footer-two" target="_blank">| Apply Now</a>
+      </div>
+
+
+      <script>
+
+
+
+        var button = document.getElementById("overview-click");
+        var myDiv = document.getElementById("profile-content");
+
+        function toggle() {
+          myDiv.style.visibility = myDiv.style.visibility === "hidden" ? "visible" : "hidden";
+        }
+
+        toggle();
+
+        button.addEventListener("click", toggle, false);
+
+
+
+        // var button2 = document.getElementById("settings-click");
+        // var myDivTwo = document.getElementById("profile-content2");
+
+        // function toggle2() {
+        //   myDivTwo.style.visibility = myDivTwo.style.visibility === "hidden" ? "visible" : "hidden";
+          
+        // }
+
+        // toggle2();
+
+        // button2.addEventListener("click", toggle, false);
+
+
+
+
+
+      </script>
+
+
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

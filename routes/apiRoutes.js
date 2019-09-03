@@ -1,6 +1,5 @@
 var db = require("../models");
 var bcrypt = require("bcrypt");
-// var Op = Sequelize.Op
 
 module.exports = function(app) {
   app.get("/api/services", function(req, res) {
@@ -24,9 +23,9 @@ module.exports = function(app) {
     res.json(req.user);
   });
 
-  app.get("api/cosmetologist/service/:id", function(req, res) {
+  app.get("/api/cosmetologist/service/:id", function(req, res) {
     db.Cosmetologists.findAll({
-      include: [{ model: Services, where: { id: req.params.id } }]
+      include: [{ model: db.Services, where: { id: req.params.id } }]
     }).then(function(data) {
       res.json(data);
     });

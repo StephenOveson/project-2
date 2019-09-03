@@ -13,11 +13,6 @@ var API = {
   }
 };
 
-// var selectService = function() {
-//   $("#selectService").on("click", function() {
-//     console.log($(this).data("id"));
-//   });
-// };
 var displayServices = function() {
   API.getServices().then(function(data) {
     var services = data.map(function(service) {
@@ -27,9 +22,14 @@ var displayServices = function() {
         .addClass("service-button")
         .on("click", function() {
           id = $(this).data("id");
-          // getCosmetologists(id).then(function(data) {
-          //   var cosmetologists = data.map(function(cosmetologist) {});
-          // });
+          API.getCosmetologists(id).then(function(data) {
+            var cosmetologists = data.map(function(cosmetologist) {
+              var div = $("<div>");
+              var p = $("<p>").text(cosmetologist.Name);
+              div.append(p);
+            });
+            $("#services").append(cosmetologists);
+          });
         });
       return button;
     });

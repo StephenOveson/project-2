@@ -18,7 +18,6 @@ var API = {
 //     console.log($(this).data("id"));
 //   });
 // };
-
 var displayServices = function() {
   API.getServices().then(function(data) {
     var services = data.map(function(service) {
@@ -28,9 +27,9 @@ var displayServices = function() {
         .addClass("service-button")
         .on("click", function() {
           id = $(this).data("id");
-          getCosmetologists(id).then(function(data) {
-            var cosmetologists = data.map(function(cosmetologist) {});
-          });
+          // getCosmetologists(id).then(function(data) {
+          //   var cosmetologists = data.map(function(cosmetologist) {});
+          // });
         });
       return button;
     });

@@ -1,29 +1,31 @@
 // Gets location from form
+// geoCode();
 let locationForm = document.getElementById('location-form');
 // listens for submit
-locationForm.addEventListener('submit', geocode);
-console.log(locationForm);
+locationForm.addEventListener("submit", geoCode);
+// console.log(locationForm);
 // Google Maps API
-function geoCode() {
+function geoCode(e) {
+    e.preventDefault();
     let location = document.getElementById('location-input').value;
-    axios.get("https://maps.googleapis.come/maps/api/geocode/json", {
+    axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
         params: {
             address: location,
-            key: "AIzaSyA-MSaLJHOpjrqvNUrp8GJNiO-n1_hbAtA"
+            key: 'AIzaSyBh7_wqsxDnrK6Am24-ZE2fSjm5_6AnjAA'
         }
     }) .then(function(response){
         console.log(response);
         
         // Formatted Address
-        let formattedAddress = response.data.results[0].formatted_Adress;
+        let formattedAddress = response.data.results[0].formatted_address;
         let formattedAddressOutput = `
         <ul class="list-group">
             <li class="list-group-item">${formattedAddress}</li>
             </ul>
         `;
         // Address Components
-        let addressComponents = response.data.results[0].address_Components;
-        let addressComponentsOutput = '<ul class="list=group">';
+        let addressComponents = response.data.results[0].address_components;
+        let addressComponentsOutput = '<ul class="list-group">';
         for (let i = 0; i < addressComponents.length;i++){
             addressComponentsOutput += `
             <li
@@ -34,12 +36,12 @@ function geoCode() {
         addressComponentsOutput += '</ul>';
 
         // Longtitude & Latitude 
-        let latitude = response.data.results[0].geometry.location.latitude;
-        let longtitude = response.data.results[0].geometry.location.longtitude;
+        let lat = response.data.results[0].geometry.location.lat;
+        let lng = response.data.results[0].geometry.location.lng;
         let geometryOutput = `
             <ul class="list-group">
-            <li class="list-group-item"><strong>Latitude</strong>${latitude}</li>
-            <li class="list-group-item"><strong>longtitude</strong>${longtitude}</li>
+            <li class="list-group-item"><strong>Latitude</strong>${lat}</li>
+            <li class="list-group-item"><strong>longtitude</strong>${lng}</li>
             </ul>
         `;
 
@@ -55,5 +57,3 @@ function geoCode() {
     })
 
 };
-
-geoCode();

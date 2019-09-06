@@ -16,12 +16,24 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cosmetic.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One|Shrikhand&display=swap" rel="stylesheet">
 
+     <!-- ---- Include the above in your HEAD tag -------- -->
+
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+    <!-- Page script -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="public/js/api.js"></script>
 
 </head>
 
@@ -31,20 +43,31 @@
         <img src="./img/icons8-crown-and-lipstick-48.png" alt="">
         <a class="navbar-brand" href="home_page.html">Glam-on-Demand</a>
 
+
+
+        <ul class="navbar-nav ml-auto">
+        <a href="./profile.html">
+          <span id="customerName"></span>
+          <img src="./public/img/icons8-circled-user-64.png" title="Profile" class="img-icon">
+          </a>
+        </ul>
+        
+
+
+      </nav>
+
     <div class="container">
         <div class="row">
             <div class="col-md-9 col-lg-8 mx-auto">
-                <h3 class="login-heading mb-4 margin-right">Hi <span id="customerName"></span> </h3>
+                <!-- <h3 class="login-heading mb-4 margin-right">Hi <span id="customerName"></span> </h3> -->
 
 
-                <!-- ---- Include the above in your HEAD tag -------- -->
-
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+               
 
 
                 <div class="container"> 
 
-                    </nav>
+                   
 
 
                         <div class="container">
@@ -59,19 +82,12 @@
                             <div class="container">
                                     <div class="row-1">
                                     <div class="col-md-9 col-lg-8 mx-auto">
-                                      <h3 class="login-heading mb-4">Services Chosen</h3>
+                                      <h3 class="login-heading mb-4" id="service-title">Services</h3>
+                                      <h5 style="text-align:center" id="emptyPickYour">Pick Your <span id="pickYour">Service!</span></h5>
+                                      <div id="services"></div>
                                         </div>
                                   </div>
                                 </div>
-    
-                                <div class="container">
-                                        <div class="row-1">
-                                        <div class="col-md-9 col-lg-8 mx-auto">
-                                          <h3 class="login-heading mb-4">Location</h3>
-                                                             
-                                        </div>
-                                      </div>
-                                    </div>
         
 
 
@@ -86,10 +102,6 @@
                         <!-- <p>Footer</p> -->
                     </div>
 
-
-                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                        crossorigin="anonymous"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
                         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
                         crossorigin="anonymous"></script>

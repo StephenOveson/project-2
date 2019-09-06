@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-  var Customers = sequelize.define(
-    "Customers",
+  var Cosmetologists = sequelize.define(
+    "Cosmetologists",
     {
       Name: DataTypes.STRING,
       Email: DataTypes.STRING,
@@ -15,5 +15,10 @@ module.exports = function(sequelize, DataTypes) {
       timestamps: false
     }
   );
-  return Customers;
+  Cosmetologists.associate = function(models) {
+    models.Cosmetologists.belongsToMany(models.Services, {
+      through: "CosmetologistService"
+    });
+  };
+  return Cosmetologists;
 };

@@ -7,3 +7,22 @@ have app ask permission for user's location
         discuss method of organization
         maybe use default*
 
+
+
+
+
+create html page for cosomotologist sign up
+
+change the routes to match
+
+
+
+
+
+
+db.cosmotologist
+
+admin page that handles database of cosmotologist
+
+post route
+

@@ -53,14 +53,19 @@ var displayServices = function() {
                 .text(cosmetologist.Name)
                 .attr("data-id", cosmetologist.id)
                 .on("click", function() {
+                  $("#service-title").text("Availability");
                   $("#pickYour").text("Day!");
                   id = $(this).data("id");
                   API.getAvailability(id).then(function(data) {
                     var availabilities = data.map(function(availability) {
                       console.log(availability.dayOfWeek);
-                      var newButton = $("<button>").text(
-                        availability.dayOfWeek
-                      );
+                      var newButton = $("<button>")
+                        .text(availability.dayOfWeek)
+                        .on("click", function() {
+                          $("#service-title").text("Checkout");
+                          $("#emptyPickYour").empty();
+                          $("#services").empty();
+                        });
                       return newButton;
                     });
                     $("#services").empty();
@@ -83,7 +88,7 @@ var displayServices = function() {
 
 displayServices();
 
-var displayName = function() {
+var displayUser = function() {
   API.getCustomer().then(function(data) {
     var result = data[0];
     var a = $("<a>")
@@ -98,4 +103,4 @@ var displayName = function() {
   });
 };
 
-displayName();
+displayUser();

@@ -51,14 +51,30 @@ module.exports = function(app) {
       Zip: data.Zip,
       Password: bcrypt.hashSync(data.Password, bcrypt.genSaltSync(2))
     }).then(function() {
-      res.redirect("/");
+      res.redirect("/sign-in.html");
+    });
+  });
+
+  app.post("/api/cosmetologist/new", function(req, res) {
+    var data = req.body;
+    db.Cosmetologists.create({
+      Name: data.Name,
+      Email: data.Email.toLowerCase(),
+      Phone: data.Phone,
+      Address: data.Address,
+      City: data.City,
+      State: data.State,
+      Zip: data.Zip,
+      Password: bcrypt.hashSync(data.Password, bcrypt.genSaltSync(2))
+    }).then(function() {
+      res.redirect("/sign-in.html");
     });
   });
 
   app.delete("/api/customer/:id", function(req, res) {
     db.Customers.destroy({
       where: {
-        id: req.params.id
+        id: req.body.id
       }
     }).then(function(data) {
       res.json(data);

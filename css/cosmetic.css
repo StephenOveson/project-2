@@ -1,6 +1,10 @@
 body {
     /* padding: 20px 80px; */
-    background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
+    /* background: rgb(190, 54, 54) url(https://subtlepatterns.com/patterns/extra_clean_paper.png); */
+    /* background: url(https://cdn.pixabay.com/photo/2012/04/15/19/14/honeycomb-34984_1280.png); */
+    /* background-image: url(https://cdn.pixabay.com/photo/2017/02/14/09/02/wood-2065366_1280.jpg); */
+    /* background: url(https://cdn.pixabay.com/photo/2017/07/01/19/48/background-2462431_1280.jpg); */
+    background: url(../public/img/wall.jpg);
   }
 
 
@@ -15,8 +19,9 @@ body {
     justify-content: flex-start;
     background-color: black;
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     height: 90px;
+    border-bottom: solid 3px;
 }
 
 img {
@@ -33,18 +38,24 @@ img {
     /* /* color: plum; */
     color: plum;
     margin-left: 20px;
-    text-decoration: none;
+    /* text-decoration: underline white; */
     text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
 }
 .navbar-light .navbar-brand:hover {
     color: rgba(0,0,0,.9);
     font-size: 48px;
     font-family: 'Shrikhand', cursive;
+    /* text-decoration: underline white; */
     /* font-family: 'Alfa Slab One', cursive; */
      /* font-family: 'Saira Stencil One', cursive; */
     color: plum;
-    text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
+    /* text-shadow: white; */
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
+
+  
+
+
 
 /* ------------------ Body and Home Page ---------------------- */
 
@@ -57,7 +68,14 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff;
+    /* background-image: url(https://cdn.pixabay.com/photo/2017/02/14/09/02/wood-2065366_1280.jpg); */
 }
+
+/* .body-home {
+    /* background-image: url(https://cdn.pixabay.com/photo/2017/02/14/09/02/wood-2065366_1280.jpg); */
+    /* background-image: url(https://cdn.pixabay.com/photo/2018/02/03/08/00/background-3127102_1280.jpg); */
+    /* background-image: url(https://cdn.pixabay.com/photo/2018/07/16/02/04/red-brick-wall-3541092_1280.jpg); */
+/* } */
 
 .container {
   padding: 16px;
@@ -102,6 +120,7 @@ body {
     margin-bottom: 1.5rem!important;
     text-align: center;
     font-family: 'Oleo Script', cursive;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-size: 47px;
     text-decoration: underline;
 }
@@ -137,6 +156,14 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+/* Css animantions */
+
+
+
+
+
 
 #log-in {
     border-color: black;
@@ -189,19 +216,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .row-1 {
+    margin-bottom: 40px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    /* background-color: whitesmoke; */
-    /* background-color: white; */
     background-color: ghostwhite;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0px 0px 2px black;
-    /* background-color: rgb(244, 96, 232); */
+    box-shadow: 0px 0px 40px black;
+    border: black;
+    border-style: double;
+    border-width: 5px;
 }
 
 /* Footer */
@@ -214,10 +242,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: black;
     color: white;
     text-align: center;
-    height: 45px;
+    height: 75px;
     padding-top: 8px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     /* display: -webkit-inline-box; */
+    border-top: solid 3px;
 }
 
 .paragraph-footer-one {
@@ -292,8 +321,8 @@ a:hover{
 .login-heading:hover{
     color: black;
     text-decoration: underline;
-    text-shadow: black;
-    text-shadow: 2px 2px plum;
+    text-shadow: grey;
+    /* text-shadow: 2px 2px pink; */
 }
 
 
@@ -313,7 +342,7 @@ element.style {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 1.25rem;
-    box-shadow: 0px 0px 2px black;
+    box-shadow: 0px 46px 200px black;
     /* background-color: whitesmoke; */
     /* background-color: white; */
     background-color: ghostwhite;
@@ -323,6 +352,9 @@ element.style {
     padding-top: 10px;
     padding-left: 76px;
     padding-right: 76px;
+    border: black;
+    border-style: double;
+    border-width: 5px;
 
 }
 
@@ -341,6 +373,7 @@ p {
 }
 
 .card {
+    background: none;
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -348,11 +381,11 @@ p {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    /* background-color: #fff; */
+  
     background-clip: border-box;
     border-radius: 8px;
     border: none;
-    background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
+    
 }
 
 hr {
@@ -475,9 +508,13 @@ textarea.form-control {
     text-align: center;
     margin-bottom: 1.5rem!important;
     text-align: center;
-    font-family: 'Oleo Script', cursive;
+    /* font-family: 'Oleo Script', cursive; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 47px;
     text-decoration: underline;
+    font-weight: 900;
+    /* text-shadow: 2px 2px plum; */
+    text-shadow: 2px 1px 2px grey;
 }
 
 
@@ -493,16 +530,14 @@ textarea.form-control {
 /* Dashboard */
 
 .img-icon {
-
+    display: block;
     cursor: pointer;
+    border-radius: 70px;
 }
 .img-icon:hover {
     color: red;
     background-color: red;
     cursor: pointer;
-}
-ul {
-    float: right;
 }
 
 /* Profile */
@@ -539,6 +574,9 @@ ul {
     padding: 20px 0 10px 0;
     background: #fff;
     border-radius: 8px;
+    border: black;
+    border-style: double;
+    border-width: 5px;
   }
   
   .profile-userpic img {
@@ -559,13 +597,14 @@ ul {
   .profile-usertitle-name {
     color: #5a7391;
     font-size: 24px;
-    font-weight: 600;
+    text-decoration: underline;
+    font-weight: 900;
     margin-bottom: 7px;
   }
   
   .profile-usertitle-job {
     text-transform: uppercase;
-    color: #5b9bd1;
+    color: black;
     font-size: 12px;
     font-weight: 600;
     margin-bottom: 41px;
@@ -594,6 +633,7 @@ ul {
   
   .profile-usermenu ul li {
     border-bottom: 1px solid #f0f4f7;
+    padding: 5px;
   }
   
   .profile-usermenu ul li:last-child {
@@ -632,10 +672,13 @@ ul {
   .profile-content {
     padding: 20px;
     background: #fff;
-    min-height: 352px;
+    min-height: 391px;
     margin-bottom: 60px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 8px;
+    border: black;
+    border-style: double;
+    border-width: 5px;
   }
 
   .side-bar-profile {
@@ -670,8 +713,118 @@ ul {
     font-size: 24px;
     margin-top: 0;
     margin-bottom: 1rem;
+    color: black;
+    font-weight: 900;
+    text-decoration: underline;
 }
 
+#overview-click {
+    text-decoration: none;
+    color: #5a7391;
+}
+
+#settings-click {
+    text-decoration: none;
+    color: #5a7391;
+}
+
+#help-click {
+    text-decoration: none;
+    color: #5a7391;
+}
+
+
+#overview-click:hover {
+    font-size: 20px;
+    color: black;
+    text-decoration: underline;
+
+}
+
+#settings-click:hover {
+    font-size: 20px;
+    color: black;
+    text-decoration: underline;
+}
+
+#help-click:hover {
+    font-size: 20px;
+    color: black;
+    text-decoration: underline;
+}
+
+/* Footer more */
+.fa {
+    padding: 3px;
+    font-size: 15px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+  }
+  
+  /* .fa:hover {
+      opacity: 0.7;
+  } */
+
+  .fa-facebook {
+    background: black;
+    color: white;
+  }
+
+  .fa-facebook:hover {
+    background: #3B5998;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+
+  .fa-twitter {
+    background: black;
+    color: white;
+  }
+
+  .fa-twitter:hover {
+    background: #55ACEE;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+
+  .fa-google {
+    background: black;
+    color: white;
+  }
+
+  .fa-google:hover {
+    background: #dd4b39;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+
+  .fa-linkedin {
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+
+  .fa-linkedin:hover {
+    background: #007bb5;
+    color: white;
+  }
+
+.customerLink {
+    color: white;
+  }
+
+/*
+   Multicoloured Hover Variations
+*/
+
+
+    
 
 /* Media Queries  */
 /* 

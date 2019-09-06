@@ -24,6 +24,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../sign-in.html"));
   });
 
+  app.get("/apply", function(req, res) {
+    res.sendFile(path.join(__dirname, "../apply.html"));
+  });
+
   app.get("/apply" + html, function(req, res) {
     res.sendFile(path.join(__dirname, "../apply.html"));
   });
@@ -34,6 +38,14 @@ module.exports = function(app) {
 
   app.get("/profile" + html, function(req, res) {
     res.sendFile(path.join(__dirname, "../profile.html"));
+  });
+
+  app.get("/sign-in-cosmo", function(req, res) {
+    res.sendFile(path.join(__dirname, "../sign-in-cosmo.html"));
+  });
+
+  app.get("/contact", function(req, res) {
+    res.sendFile(path.join(__dirname, "../contact.html"));
   });
 
   app.get("/contact" + html, function(req, res) {

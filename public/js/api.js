@@ -5,7 +5,7 @@ var API = {
       type: "GET"
     });
   },
-  getCosmetologists: function(id) {
+  getCosmetologistService: function(id) {
     return $.ajax({
       url: "api/cosmetologist/service/" + id,
       type: "GET"
@@ -22,6 +22,12 @@ var API = {
       url: "api/availabilities/" + id,
       type: "GET"
     });
+  },
+  getCosmetologist: function() {
+    return $.ajax({
+      url: "api/cosmetologist",
+      type: "GET"
+    });
   }
 };
 
@@ -36,19 +42,10 @@ var displayServices = function() {
           $("#service-title").text("Cosmetologists");
           $("#pickYour").text("Cosmetologist!");
           var id = $(this).data("id");
-          API.getCosmetologists(id).then(function(data) {
+          API.getCosmetologistService(id).then(function(data) {
             var cosmetologists = data.map(function(cosmetologist) {
               var div = $("<div>");
-              var p = $("<p>")
-                .text("Would you like " + cosmetologist.Name)
-                .text("to perform " + cosmetologist.Services[0].name)
-                .text(
-                  "The " +
-                    cosmetologist.Services[0].name +
-                    " will cost " +
-                    "$" +
-                    cosmetologist.Services[0].cost
-                );
+              var p = $("<p>");
               var select = $("<button>")
                 .text(cosmetologist.Name)
                 .attr("data-id", cosmetologist.id)

@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="apis.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- so you dont have to run/install axios on node -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!--hosted library cdn for AutoComplete  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <h2 id="text-center">Enter Location:</h2>
         <form id="location-form">
-            <input type="text" id="location-input" class="form-control 
-            form-control-lg">
+            <input type="text" id="location-input" name="location-input" class="form-control 
+            form-control-lg" >
+            <input type="hidden" name="lat">
+            <input type="hidden" name="long">
+
             <br>
-            <button type="submit" >Submit</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
         </form>
         <div id="formatted-address"></div>
         <div id="address-components"></div>
         <div id="geometry"></div>
     </div>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh7_wqsxDnrK6Am24-ZE2fSjm5_6AnjAA&amp;libraries=places"></script>
+    <script src="apis.js"></script>
 </body>
+
 </html>

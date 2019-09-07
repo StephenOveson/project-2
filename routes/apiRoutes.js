@@ -19,6 +19,14 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/cosmetologist/:id", function(req, res) {
+    db.Cosmetologists.findOne({
+      where: req.body.id
+    }).then(function(data) {
+      res.json(data);
+    });
+  });
+
   app.get("/api/customer", function(req, res) {
     res.json(req.user);
   });

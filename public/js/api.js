@@ -23,9 +23,9 @@ var API = {
       type: "GET"
     });
   },
-  getCosmetologist: function() {
+  getCosmetologist: function(id) {
     return $.ajax({
-      url: "api/cosmetologist",
+      url: "api/cosmetologist/" + id,
       type: "GET"
     });
   },
@@ -133,9 +133,35 @@ var displayUser = function() {
     $("#deleteButton").append(deleteButton);
     API.getAppointment().then(function(data) {
       var appointments = data.map(function(appointment) {
-        var div = $("<div>");
-        var day = $("<p>").text(appointment.Time);
-        div.append(day);
+        console.log(appointment.CosmetologistId);
+        API.getCosmetologist(appointment.CosmetologistId).then(function(data) {
+          console.log(data);
+          var div = $("<div>");
+          var day = $("<p>").text(
+            "Day of appointment: " +
+              appointment.Time +
+              " | Cosmetologist: " +
+              data.Name
+          );
+          var email = $("<p>").text(
+            "Email your cosmetologist with any questions: " + data.Email
+          );
+          var addressHead = $("<h5>").text("Appointment location: ");
+          var address = $("<p>").text(
+            appointment.Address +
+              ", " +
+              appointment.City +
+              ", " +
+              appointment.State +
+              " " +
+              appointment.Zip
+          );
+          div.append(day);
+          day.append(email);
+          addressHead.append(address);
+          email.append(addressHead);
+          $("#appointmentDisplay").append(div);
+        });
       });
       return appointments;
     });

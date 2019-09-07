@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Appointments = sequelize.define("Appointments", {
-    Time: DataTypes.DATE,
+    Time: DataTypes.STRING,
     Address: DataTypes.STRING,
     City: DataTypes.STRING,
     State: DataTypes.STRING,

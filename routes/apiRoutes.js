@@ -47,6 +47,14 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/appointment", function(req, res) {
+    db.Appointments.findAll({
+      where: { CustomerId: req.user[0].id }
+    }).then(function(data) {
+      res.json(data);
+    });
+  });
+
   app.post("/api/customer/new", function(req, res) {
     var data = req.body;
     db.Customers.create({
@@ -79,16 +87,19 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/appointments", function(req, res) {
+  app.post("/api/appointment/new", function(req, res) {
+    var data = req.user[0];
     db.Appointments.create({
       Time: req.body.Time,
-      Address: req.user.Address,
-      City: req.user.City,
-      State: req.user.State,
-      Zip: req.user.Zip,
-      CosmetologistId: req.body.CosmetologistId,
-      CustomerId: req.user.id,
+      Address: data.Address,
+      City: data.City,
+      State: data.State,
+      Zip: data.Zip,
+      CosmetologistId: req.body.cosmetologistId,
+      CustomerId: data.id,
       ServiceId: req.body.serviceId
+    }).then(function() {
+      res.redirect("/profile.html");
     });
   });
 
@@ -101,9 +112,9 @@ module.exports = function(app) {
       res.redirect("/");
     });
   });
+};
 
-//   FUTURE DEVELOPMENT locationService 
-
+//   FUTURE DEVELOPMENT locationService
 
 //   app.post("/api/locations/new", function(req, res) {
 //     var data = req.body;

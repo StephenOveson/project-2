@@ -29,9 +29,15 @@ var API = {
       type: "GET"
     });
   },
+  getAppointment: function() {
+    return $.ajax({
+      url: "api/appointment",
+      type: "GET"
+    });
+  },
   postAppointment: function(day, cosmoId, servId) {
     return $.ajax({
-      url: "api/appointments",
+      url: "api/appointment/new",
       type: "POST",
       data: {
         Time: day,
@@ -78,10 +84,10 @@ var displayServices = function() {
                         .attr("data-day", availability.dayOfWeek)
                         .on("click", function() {
                           var day = $(this).data("day");
-                          $("#service-title").text("Checkout");
+                          $("#service-title").text("Appointments!");
                           $("#emptyPickYour").empty();
                           $("#services").empty();
-                          postAppointment(day, cosmoId, servId);
+                          API.postAppointment(day, cosmoId, servId);
                         });
                       return newButton;
                     });
@@ -125,6 +131,14 @@ var displayUser = function() {
         API.deleteCustomer(deleteUser);
       });
     $("#deleteButton").append(deleteButton);
+    API.getAppointment().then(function(data) {
+      var appointments = data.map(function(appointment) {
+        var div = $("<div>");
+        var day = $("<p>").text(appointment.Time);
+        div.append(day);
+      });
+      return appointments;
+    });
   });
 };
 

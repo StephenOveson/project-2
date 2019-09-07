@@ -19,8 +19,15 @@ module.exports = function(app) {
   });
 
   app.get("/api/customer", function(req, res) {
-    console.log(req.user);
     res.json(req.user);
+  });
+
+  app.get("/api/cosmetologist", function(req, res) {
+    db.Cosmetologists.findAll({
+      where: req.body.email
+    }).then(function(data) {
+      res.json(data);
+    });
   });
 
   app.get("/api/cosmetologist/service/:id", function(req, res) {
@@ -71,13 +78,13 @@ module.exports = function(app) {
     });
   });
 
-  app.delete("/api/customer/:id", function(req, res) {
+  app.delete("/api/customer/id", function(req, res) {
     db.Customers.destroy({
       where: {
         id: req.body.id
       }
-    }).then(function(data) {
-      res.json(data);
+    }).then(function() {
+      res.redirect("/");
     });
   });
 

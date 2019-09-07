@@ -5,8 +5,21 @@ body {
     /* background: url(https://cdn.pixabay.com/photo/2012/04/15/19/14/honeycomb-34984_1280.png); */
     /* background-image: url(https://cdn.pixabay.com/photo/2017/02/14/09/02/wood-2065366_1280.jpg); */
     /* background: url(https://cdn.pixabay.com/photo/2017/07/01/19/48/background-2462431_1280.jpg); */
-    background: url(../public/img/wall.jpg);
+    background: url(../public/img/wall-2.jpg);
+    /* background-image: url(https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); */
+    background-size: cover;
+    margin: 0;
+    height: 100%;
+    width: 100%;
   }
+
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+
+
+}  
 
 
 /*----------------- Header for all pages ----------------- */
@@ -20,9 +33,10 @@ body {
     justify-content: flex-start;
     background-color: black;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     height: 90px;
     border-bottom: solid 3px;
+    width: auto;
 }
 
 img {
@@ -72,11 +86,7 @@ body {
     /* background-image: url(https://cdn.pixabay.com/photo/2017/02/14/09/02/wood-2065366_1280.jpg); */
 }
 
-/* .body-home {
-    /* background-image: url(https://cdn.pixabay.com/photo/2017/02/14/09/02/wood-2065366_1280.jpg); */
-    /* background-image: url(https://cdn.pixabay.com/photo/2018/02/03/08/00/background-3127102_1280.jpg); */
-    /* background-image: url(https://cdn.pixabay.com/photo/2018/07/16/02/04/red-brick-wall-3541092_1280.jpg); */
-/* } */
+
 
 .container {
   padding: 16px;
@@ -267,16 +277,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    /* color: #007bff; */
+    color: white;
     text-decoration: underline;
     background-color: transparent;
 }
 a:hover{
-    color: plum;
+    color: black;
     font-size: 18px;
 }
 
+.a-text {
+    font-weight: 500;
+
+}
+
 /* Sign Up Page */
+
+.a-color {
+    color: black;
+}
+
 
 .col, .col-1, .col-10, .col-11,
 .col-12, .col-2, .col-3, .col-4,
@@ -425,7 +445,7 @@ hr {
     font-size: 25px;
 }
 
-.navbar-expand-lg {
+/* .navbar-expand-lg {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
     -ms-flex-pack: start;
@@ -433,7 +453,7 @@ hr {
     background-color: black;
     color: white;
     height: 90px;
-}
+} */
  #navbar-2 {
      height: 90px;
  }
@@ -540,6 +560,22 @@ textarea.form-control {
     background-color: red;
     cursor: pointer;
 }
+.db-page {
+    background-size: cover;
+    /* background: url(../public/img/wall.jpg); */
+
+}
+
+.service-button {
+    color: black;
+    border-radius: 8px;
+}
+
+.service-button:hover {
+    color: white;
+    text-decoration: underline;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* Profile */
 
@@ -555,14 +591,10 @@ textarea.form-control {
 
 }
 
-/* .card-profile {
-    background-color: black;
-} */
 
 /* Profile */
 
 
-  
   /* Profile container */
   .profile {
     margin: 20px 0;
@@ -577,6 +609,7 @@ textarea.form-control {
     border: black;
     border-style: double;
     border-width: 5px;
+    box-shadow: 0px 0px 40px black;
   }
   
   .profile-userpic img {
@@ -679,6 +712,7 @@ textarea.form-control {
     border: black;
     border-style: double;
     border-width: 5px;
+    box-shadow: 0px 0px 40px black;
   }
 
   .side-bar-profile {
@@ -820,19 +854,17 @@ textarea.form-control {
   }
 
 /*
-   Multicoloured Hover Variations
+   Media screens
 */
 
+/* @media only screen and (max-width: 600px) {
 
-    
+    .row-1 {
 
-/* Media Queries  */
-/* 
-@media (min-width: 768px)
-.container {
-    max-width: 720px;
-}
-@media (min-width: 576px)
-.container {
-    max-width: 540px;
+        margin: auto;
+        margin-left: 60px;
+
+
+    }
+
 } */

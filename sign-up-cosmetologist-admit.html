@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Font -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <!-- <link href="./css/style.css" type="text/css" rel="stylesheet"> -->
+  <link href="./css/cosmetic.css" type="text/css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One|Shrikhand&display=swap" rel="stylesheet">
+
+  <!------ Include the above in your HEAD tag ---------->
+
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> -->
+
+  <!-- Jquerey -->
+
+  <title>Glam-on-Demand</title>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <img src="./img/icons8-crown-and-lipstick-48.png" alt="">
+    <a class="navbar-brand" href="home_page.html">Glam-on-Demand</a>
+
+  </nav>
+
+
+
+
+
+
+
+
+
+  <div class="container-two">
+    <div class="row">
+      <div class="col-md-9 col-lg-8 mx-auto">
+        <!-- <h3 class="login-heading mb-4">Welcome!</h3> -->
+
+        <div class="container">
+
+          <div class="card">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+              <h4 class="card-title mt-3 text-center">Create Cosmetologist Account</h4>
+              <p class="text-center">Get started with your free account</p>
+
+              <hr>
+
+              
+              <form action="/api/cosmetologist/new" method="post">
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                  </div>
+                  <input name="Name" class="form-control" placeholder="Full name" type="text">
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                  </div>
+                  <input name="Email" class="form-control" placeholder="Email address" type="email">
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                  </div>
+                  <input name="Phone" class="form-control" placeholder="Phone number" type="text">
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-location-arrow"></i> </span>
+                  </div>
+                  <input name="Address" class="form-control" placeholder="Address" type="text">
+                </div>
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-location-arrow"></i> </span>
+                  </div>
+                  <input name="City" class="form-control" placeholder="City" type="text">
+                </div>
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-location-arrow"></i> </span>
+                  </div>
+                  <input name="State" class="form-control" placeholder="State" type="text">
+                </div>
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-location-arrow"></i> </span>
+                  </div>
+                  <input name="Zip" class="form-control" placeholder="Zip" type="text">
+                </div>
+
+                <!-- </div> form-group end.// -->
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                  </div>
+                  <input name="Password" class="form-control" placeholder="Create Password" type="password">
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                  </div>
+                  <input class="form-control" placeholder="Confirm Password" type="password" name="Password-confirm">
+                </div> <!-- form-group// -->
+
+                <hr>
+
+
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-block"> Create Account </button>
+                </div> <!-- form-group// -->
+                <p class="text-center">Have an account? <a href="./sign-in.html">Log In</a> </p>
+              </form>
+            </article>
+          </div> <!-- card.// -->
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+
+
+
+        <div class="footer">
+          <a href="./contact.html" class="paragraph-footer-one" target="_blank">Contact Us |</a>
+          <a href="./apply.html" class="paragraph-footer-two" target="_blank">| Apply Now</a>
+          <br>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+        </div>
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>

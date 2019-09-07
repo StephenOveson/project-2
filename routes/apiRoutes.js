@@ -80,4 +80,21 @@ module.exports = function(app) {
       res.json(data);
     });
   });
-};
+
+//   FUTURE DEVELOPMENT locationService 
+
+
+//   app.post("/api/locations/new", function(req, res) {
+//     var data = req.body;
+//     db.locations
+//       .create({
+//         Name: data.Name,
+//         Address: data.Address,
+//         lat: data.lat,
+//         lng: data.lng
+//       }).then(function(data){
+//         res.send(xml({a: [{_attr:row
+//         }]})) === '<a'
+//       })
+//     })
+// }

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 var db = require("../models");
 var bcrypt = require("bcrypt");
 
@@ -78,16 +79,25 @@ module.exports = function(app) {
     });
   });
 
-  app.delete("/api/customer/id", function(req, res) {
+  app.post("/api/appointments", function(req, res) {
+    db.Appointments.create({
+      Time: req.body.Time,
+      Address: req.user.Address,
+      City: req.user.City,
+      State: req.user.State,
+      Zip: req.user.Zip,
+      CosmetologistId: req.body.CosmetologistId,
+      CustomerId: req.user.id,
+      ServiceId: req.body.serviceId
+    });
+  });
+
+  app.delete("/api/customer/:id", function(req, res) {
     db.Customers.destroy({
       where: {
-        id: req.body.id
+        id: req.params.id
       }
-<<<<<<< HEAD
     }).then(function() {
-=======
-    }).then(function(data) {
->>>>>>> 3e5d00959a6d5fd5e4068746443c6934f0a7b20f
       res.redirect("/");
     });
   });

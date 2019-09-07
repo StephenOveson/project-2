@@ -29,11 +29,22 @@ var API = {
       type: "GET"
     });
   },
+  postAppointment: function(day, cosmoId, servId) {
+    return $.ajax({
+      url: "api/appointments",
+      type: "POST",
+      data: {
+        Time: day,
+        cosmetologistId: cosmoId,
+        serviceId: servId
+      }
+    });
+  },
   deleteCustomer: function(id) {
     return $.ajax({
-      url: "/api/customer/id",
+      url: "api/customer/" + id,
       type: "DELETE"
-    })
+    });
   }
 };
 
@@ -47,8 +58,8 @@ var displayServices = function() {
         .on("click", function() {
           $("#service-title").text("Cosmetologists");
           $("#pickYour").text("Cosmetologist!");
-          var id = $(this).data("id");
-          API.getCosmetologistService(id).then(function(data) {
+          var servId = $(this).data("id");
+          API.getCosmetologistService(servId).then(function(data) {
             var cosmetologists = data.map(function(cosmetologist) {
               var div = $("<div>");
               var p = $("<p>");
@@ -58,16 +69,19 @@ var displayServices = function() {
                 .on("click", function() {
                   $("#service-title").text("Availability");
                   $("#pickYour").text("Day!");
-                  id = $(this).data("id");
-                  API.getAvailability(id).then(function(data) {
+                  var cosmoId = $(this).data("id");
+                  API.getAvailability(cosmoId).then(function(data) {
                     var availabilities = data.map(function(availability) {
                       console.log(availability.dayOfWeek);
                       var newButton = $("<button>")
                         .text(availability.dayOfWeek)
+                        .attr("data-day", availability.dayOfWeek)
                         .on("click", function() {
+                          var day = $(this).data("day");
                           $("#service-title").text("Checkout");
                           $("#emptyPickYour").empty();
                           $("#services").empty();
+                          postAppointment(day, cosmoId, servId);
                         });
                       return newButton;
                     });
@@ -103,16 +117,15 @@ var displayUser = function() {
     $("#userName").append(result.Name);
     $("#accountId").append(" " + result.id);
     $("#userEmail").append(result.Email);
-    $("#deleteButton").attr("data-id", result.id);
+    var deleteButton = $("<button>")
+      .text("Delete Account")
+      .attr("data-id", result.id)
+      .on("click", function() {
+        var deleteUser = $(this).data("id");
+        API.deleteCustomer(deleteUser);
+      });
+    $("#deleteButton").append(deleteButton);
   });
 };
 
 displayUser();
-
-
-
-var deleteUser = function() {
-  $("#deleteButton").on("click", function(){
-    API.deleteCustomer(id)
-  })
-}

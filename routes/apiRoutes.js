@@ -78,13 +78,13 @@ module.exports = function(app) {
     });
   });
 
-  app.delete("/api/customer/:id", function(req, res) {
+  app.delete("/api/customer/id", function(req, res) {
     db.Customers.destroy({
       where: {
         id: req.body.id
       }
     }).then(function(data) {
-      res.json(data);
+      res.redirect("/");
     });
   });
 };

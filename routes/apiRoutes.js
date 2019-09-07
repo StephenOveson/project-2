@@ -83,11 +83,7 @@ module.exports = function(app) {
       where: {
         id: req.body.id
       }
-<<<<<<< HEAD
     }).then(function() {
-=======
-    }).then(function(data) {
->>>>>>> 3e5d00959a6d5fd5e4068746443c6934f0a7b20f
       res.redirect("/");
     });
   });

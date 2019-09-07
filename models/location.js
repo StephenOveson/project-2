@@ -1,4 +1,4 @@
-// Future Development
+// FUTURE DEVELOPMENT
 
 // module.exports = function(sequelize, DataTypes) {
 //   var locations = sequelize.define("Locations", {

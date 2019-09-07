@@ -28,6 +28,12 @@ var API = {
       url: "api/cosmetologist",
       type: "GET"
     });
+  },
+  deleteCustomer: function(id) {
+    return $.ajax({
+      url: "/api/customer/id",
+      type: "DELETE"
+    })
   }
 };
 
@@ -97,7 +103,16 @@ var displayUser = function() {
     $("#userName").append(result.Name);
     $("#accountId").append(" " + result.id);
     $("#userEmail").append(result.Email);
+    $("#deleteButton").attr("data-id", result.id);
   });
 };
 
 displayUser();
+
+
+
+var deleteUser = function() {
+  $("#deleteButton").on("click", function(){
+    API.deleteCustomer(id)
+  })
+}

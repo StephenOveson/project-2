@@ -1,3 +1,4 @@
+
 body {
     /* padding: 20px 80px; */
     /* background: rgb(190, 54, 54) url(https://subtlepatterns.com/patterns/extra_clean_paper.png); */
@@ -591,7 +592,6 @@ textarea.form-control {
 }
 
 
-
 /* Profile */
 
 
@@ -857,7 +857,7 @@ textarea.form-control {
    Media screens
 */
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
 
     .row-1 {
 
@@ -867,4 +867,4 @@ textarea.form-control {
 
     }
 
-}
+} */

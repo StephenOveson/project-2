@@ -1,6 +1,5 @@
 // require("dotenv").config();
 var express = require("express");
-// var exphbs = require("express-handlebars");
 var path = require("path");
 var passport = require("passport"),
   LocalStrategy = require("passport-local").Strategy;
@@ -59,19 +58,6 @@ passport.serializeUser(function(user, done) {
 passport.deserializeUser(function(user, done) {
   done(null, user);
 });
-
-// Customers.prototype.generateHash = function(password) {
-//   return bcrypt.hash(password, bcrypt.genSaltSync(5));
-// };
-
-// Handlebars
-// app.engine(
-//   "handlebars",
-//   exphbs({
-//     defaultLayout: "main"
-//   })
-// );
-// app.set("view engine", "handlebars");
 
 // Routes
 require("./routes/apiRoutes")(app);
